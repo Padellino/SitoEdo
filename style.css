@@ -1,7 +1,7 @@
 :root {
   --bg: #0B0E14;
   --text: #BDC3C7;
-  --accent: #FFB347;
+  --accent:  #E67E22;
 }
 
 * {
@@ -33,6 +33,15 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 5%;
+}
+
+.container h2{
+  color: #FFB347;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 48px;
 }
 
 .hero {
@@ -170,7 +179,6 @@ section {
   border-radius: 10px 10px 0 0;
   display: block;
 }
-
 /* Wrapper immagine */
 .card-image {
   flex: 0.9;
@@ -277,9 +285,6 @@ section {
   cursor: pointer;
 }
 
-.about {
-  max-width: 700px;
-}
 
 footer {
   text-align: center;
@@ -354,11 +359,12 @@ a:hover {
   transform: scale(1.2);
 }
 
+
 .about {
-  padding: 100px 0;
+  max-width: 95%;
+    padding: 100px 0;
   padding-left: 10%;
 }
-
 .about-wrapper {
   display: flex;
   align-items: center;
@@ -369,7 +375,7 @@ a:hover {
 }
 
 .about-image {
-  flex: 1.8;
+  flex: 1.5;
 }
 
 .about-image img {
@@ -396,5 +402,65 @@ a:hover {
 }
 
 .about-text h2 {
+  font-size: 36px;
   margin-bottom: 20px;
+}
+
+.eventi-section .grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  padding: 20px;
+}
+.eventi-section .card {
+  background: #11151f;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+/* Box testo sopra */
+.eventi-section .card-header {
+  padding: 20px;
+  background: #0f141d;
+}
+
+.eventi-section .card-header h3 {
+  color: #FFB347;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 0 10px 0;
+  font-size: 22px;
+}
+
+.eventi-section .card-header p {
+  color: #BDC3C7;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+/* Immagine */
+.eventi-section .card-image {
+  position: relative;
+}
+
+.eventi-section .card-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Play icon */
+.eventi-section .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #FFB347;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.eventi-section .card:hover .play-icon {
+  transform: translate(-50%, -50%) scale(1.2);
 }
