@@ -86,12 +86,18 @@ section {
   padding: 20px;
 }
 
+/* Contenitore card wrapper */
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* spazio tra le card */
+}
+
+/* Card base */
 .card {
-  background: #11151f;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .card:hover {
@@ -105,11 +111,13 @@ section {
 }
 /* Wrapper immagine */
 .card-image {
+  flex: 1;
   position: relative;
-  width: 100%;
-  display: block;
 }
-
+.card-text {
+  flex: 1;
+  color: #BDC3C7;
+}
 /* Simbolo play */
 .play-icon {
   position: absolute;
@@ -128,6 +136,10 @@ section {
   transform: translate(-50%, -50%) scale(1.2);
   opacity: 1;
 }
+.card.reverse {
+  flex-direction: row-reverse;
+  text-align: left;
+}
 .card h3 {
   color: #FFB347;
   font-family: 'Montserrat', sans-serif;
@@ -135,7 +147,15 @@ section {
   text-align: center;
   padding: 15px 0;
 }
-
+@media (max-width: 900px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .card.reverse {
+    flex-direction: column;
+  }
+}
 /* LIGHTBOX */
 .lightbox {
   display: none;
