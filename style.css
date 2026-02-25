@@ -15,10 +15,12 @@ body {
   color: var(--text);
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-   padding-top: 80px;
+  padding-top: 80px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Montserrat', sans-serif;
   color: var(--accent);
 }
@@ -79,6 +81,64 @@ section {
   color: var(--bg);
 }
 
+.showreel {
+  position: relative;
+  height: 100vh;              /* 🔥 tutta altezza schermo */
+  width: 100%;
+  overflow: hidden;
+}
+
+.showreel-video iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.77vh;            /* 16:9 ratio fix */
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;       /* disabilita click */
+}
+
+.showreel-overlay {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(11,14,20,0.6); /* colore sfondo tuo #0B0E14 */
+}
+
+.showreel-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #BDC3C7;
+  text-align: center;
+}
+
+.showreel-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  color: #FFB347;
+  margin-bottom: 20px;
+}
+
+.showreel-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: 2px solid #FFB347;
+  color: #FFB347;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.showreel-btn:hover {
+  background: #FFB347;
+  color: #0B0E14;
+}
 .grid {
   display: grid;
   gap: 30px;
@@ -90,13 +150,14 @@ section {
 .card-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 50px; /* spazio tra le card */
+  gap: 50px;
+  /* spazio tra le card */
 }
 
 /* Card base */
 .card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
 }
 
@@ -105,29 +166,49 @@ section {
 }
 
 .card img {
-  width: 100%;
+  width: 90%;
   border-radius: 10px 10px 0 0;
   display: block;
 }
+
 /* Wrapper immagine */
 .card-image {
-  flex: 1;
+  flex: 0.9;
   position: relative;
 }
+
 .card-text {
-  flex: 1;
+  flex: 1.2;
   color: #BDC3C7;
 }
+
+.card-content {
+  flex: 1;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  /* elimina spazio extra sopra */
+  margin-bottom: 15px;
+}
+
+.card-content p {
+  margin: 0;
+}
+
 /* Simbolo play */
 .play-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 50px;        /* dimensione simbolo */
-  color: #FFB347;         /* colore arancione accento */
+  font-size: 50px;
+  /* dimensione simbolo */
+  color: #FFB347;
+  /* colore arancione accento */
   opacity: 0.9;
-  pointer-events: none;    /* clic passa all’immagine/card */
+  pointer-events: none;
+  /* clic passa all’immagine/card */
   transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -136,10 +217,12 @@ section {
   transform: translate(-50%, -50%) scale(1.2);
   opacity: 1;
 }
+
 .card.reverse {
   flex-direction: row-reverse;
   text-align: left;
 }
+
 .card h3 {
   color: #FFB347;
   font-family: 'Montserrat', sans-serif;
@@ -147,22 +230,27 @@ section {
   text-align: center;
   padding: 15px 0;
 }
+
 @media (max-width: 900px) {
   .card {
     flex-direction: column;
     text-align: center;
   }
+
   .card.reverse {
     flex-direction: column;
   }
 }
+
 /* LIGHTBOX */
 .lightbox {
   display: none;
   position: fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  background: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -214,12 +302,13 @@ a:hover {
     font-size: 2.2rem;
   }
 }
+
 .navbar {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(11,14,20,0.9);
+  background: rgba(11, 14, 20, 0.9);
   backdrop-filter: blur(6px);
   padding: 15px 10%;
   z-index: 1000;
@@ -248,6 +337,7 @@ a:hover {
 .nav-links a:hover {
   color: var(--accent);
 }
+
 .social-icons {
   margin-top: 20px;
 }
@@ -271,8 +361,10 @@ a:hover {
 
 .about-wrapper {
   display: flex;
-  align-items: center;      /* centro verticale rispetto all’immagine */
-  justify-content: center;  /* centro orizzontale tra immagine e testo */
+  align-items: center;
+  /* centro verticale rispetto all’immagine */
+  justify-content: center;
+  /* centro orizzontale tra immagine e testo */
   gap: 80px;
 }
 
@@ -282,18 +374,25 @@ a:hover {
 
 .about-image img {
   width: 100%;
-  aspect-ratio: 1 / 1;   /* mantiene quadrata */
+  aspect-ratio: 1 / 1;
+  /* mantiene quadrata */
   object-fit: cover;
   border-radius: 12px;
-  min-height: 550px;      /* ingrandisce immagine */
+  min-height: 550px;
+  /* ingrandisce immagine */
 }
 
 .about-text {
-  flex: 1.5;                /* spazio maggiore per il testo */
-  display: flex;             /* trasformiamo il testo in flex container */
-  flex-direction: column;    /* testo verticale normale */
-  justify-content: center;   /* centra verticalmente dentro la colonna */
-  text-align: left;        /* centra orizzontalmente il testo */
+  flex: 1.5;
+  /* spazio maggiore per il testo */
+  display: flex;
+  /* trasformiamo il testo in flex container */
+  flex-direction: column;
+  /* testo verticale normale */
+  justify-content: center;
+  /* centra verticalmente dentro la colonna */
+  text-align: left;
+  /* centra orizzontalmente il testo */
 }
 
 .about-text h2 {
