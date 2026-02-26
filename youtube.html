@@ -1,72 +1,110 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>YouTube | Edoardo Blua</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="images/favicon.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>YouTube | Edoardo Blua</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo_EB.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="script/script.js"></script>
 </head>
 
 <body>
 
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="logo">EDOARDO BLUA</a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="youtube.html">YouTube</a>
-      <a href="matrimoni.html">Matrimoni</a>
-	  <a href="#contatti">Contatti</a>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/header_EB.png" alt="Edoardo Blua">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="motion_graphic.html">MOTION GRAPHICS</a>
+        <a href="matrimoni.html">Matrimoni</a>
+        <a href="#contatti">Contatti</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content container">
-    <h1>Youtube</h1>
-    <p>Qualche cosa</p>
-	<div>
-      <a href="#portfolio" class="btn">Guarda i lavori</a>
+  <section class="hero">
+    <img src="images/sfondo.jpg" alt="Sfondo Hero" class="hero-bg">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content container">
+      <h1>Youtube</h1>
+      <p>Qualche cosa</p>
     </div>
-  </div>
-</section>
-<section id="portfolio" class="container" style="padding-top:120px;">
-  <h1>YouTube Projects</h1>
+  </section>
 
-  <div class="grid">
+  <section class="youtube-page">
+    <div class="container youtube-wrapper">
+      <div class="youtube-left">
+        <div class="card" data-video="-bu6Wf0MAzTeF4LQ">
+          <div class="card-image">
+            <img src="images/heyhey.jpg" alt="Borgata Villaretto">
+            <div class="play-icon">&#9658;</div>
+          </div>
+        </div>
+        <div class="card" data-video="-bu6Wf0MAzTeF4LQ">
+          <div class="card-image">
+            <img src="images/heyhey.jpg" alt="Borgata Villaretto">
+            <div class="play-icon">&#9658;</div>
+          </div>
+        </div>
+      </div>
 
-    <div class="card">
-      <iframe src="https://www.youtube.com/embed/xQWrTgm2aMs" allowfullscreen></iframe>
-      <h3>Lagnasco – Londra in Bicicletta</h3>
+      <div class="youtube-right">
+        <h2>YOUPORN</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+          into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+          release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+          software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+          into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+          release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+          software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+
     </div>
+    <div id="lightbox" class="lightbox">
 
-    <div class="card">
-      <iframe src="https://www.youtube.com/embed/vXWr77a-2to" allowfullscreen></iframe>
-      <h3>600km 10000m+ NO STOP</h3>
+      <div class="lightbox-content">
+        <span class="close">&times;</span>
+        <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
     </div>
+  </section>
+  <section id="contatti">
+    <h2>Contatti</h2>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/edo_blua_ph/" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/@edoardoblua" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+  </section>
 
-  </div>
-</section>
-<section id="contatti">
-<h2>Contatti</h2>
-  <div class="social-icons">
-  <a href="https://www.instagram.com/edo_blua_ph/" target="_blank">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://www.youtube.com/@edoardoblua" target="_blank">
-    <i class="fab fa-youtube"></i>
-  </a>
-</div>
-</section>
-
-<footer>
-  © 2026 Edoardo Blua — Video Maker
-</footer>
+  <footer>
+    © 2026 Edoardo Blua — Video Maker
+  </footer>
 </body>
+
 </html>
