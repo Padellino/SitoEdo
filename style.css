@@ -501,7 +501,7 @@ section {
   font-family: 'MontserratExtraBold', sans-serif !important;
   font-size: 75px;
 }
-}
+
 
 .documentari-section .card:hover {
   transform: translateY(-5px);
@@ -1178,7 +1178,7 @@ a:hover {
 /* SEZIONE YOUTUBE */
 .youtube-page {
   padding: 80px 10%;
-  background: var(--bg)
+  background: var(--bg);
   color: #BDC3C7;
 }
 
