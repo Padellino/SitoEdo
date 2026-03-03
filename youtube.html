@@ -13,11 +13,13 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/logo_EB.png">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<script src="script/script.js"></script>
+  
+<script src="https://player.vimeo.com/api/player.js"></script>
+  <script src="script/script.js"></script>
 </head>
 
 <body>
-<nav class="navbar">
+  <nav class="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo">
         <img src="images/header_EB.png" alt="Edoardo Blua">
@@ -32,72 +34,73 @@
   </nav>
 
   <section class="hero">
-    <img src="images/sfondo.jpg" alt="Sfondo Hero" class="hero-bg">
+    <img src="images/BannerYT.png" alt="Sfondo Hero" class="hero-bg">
 
     <div class="hero-overlay"></div>
 
-    <div class="hero-content container">
-      <h1>Youtube</h1>
-      <p>Qualche cosa</p>
+    <div class="hero-content-youtube container">
+      <h1>Attraverso il filmmaking, ho dato voce alla mia passione per la bicicletta, trasformando viaggi e avventure in
+        storie da condividere.</h1>
     </div>
   </section>
+  <section>
+    <div class="container">
+      <div class="grid">
+        <div class="card-wrapper">
+          <div class="card" data-video="xQWrTgm2aMs" data-platform="youtube">
+            <div class="card-image">
+              <img src="images/copertine/13_YOUTUBE_Londra.png" alt="Video 2" data-platform="youtube">
+              <div class="play-icon">&#9658;</div>
+            </div>
+            <div class="card-content">
+              <h3>Lagnasco - Londra in bicicletta</h3>
+              <p>
+                C'è una consapevolezza che solo un viaggio in bicicletta sa restituire: il senso di appartenenza ad un
+                mondo in cui siamo ospiti, e non padroni.
+                In questo documentario ho voluto raccontare il mio viaggio da casa fino al cuore di Londra. Dal Colle
+                dell’Agnello alla pioggia della Loira, tra Parigi e la Normandia, 1700km in solitaria con una bici di
+                25kg.
+              </p>
+            </div>
+          </div>
+          <div class="card reverse" data-video="vXWr77a-2to" data-platform="youtube">
+            <div class="card-image">
+              <img src="images/copertine/14_YOUTUBE_600km.png" alt="Video 2" data-platform="youtube">
+              <div class="play-icon">&#9658;</div>
+            </div>
+            <div class="card-content">
+              <h3>600km 10000m+ NO STOP</h3>
+              <p>
+                Oltre al viaggio, amo vivere la bicicletta in un’altra condizione estrema: quella dell’Ultra Cycling.
+                In questo video affronto la Super Randonnée dei Monti Liguri di Levante 600km e 11000 m di dislivello in
+                57 ore. Cosa mi spinge? Forse la ricerca di una risposta che non esiste, o forse solo la voglia di
+                spingersi oltre.
 
-  <section class="youtube-page">
-    <div class="container youtube-wrapper">
-      <div class="youtube-left">
-        <div class="card" data-video="-bu6Wf0MAzTeF4LQ">
-          <div class="card-image">
-            <img src="images/heyhey.jpg" alt="Borgata Villaretto">
-            <div class="play-icon">&#9658;</div>
+              </p>
+            </div>
+          </div>
+          <div class="card" data-video="UL38KgqV-nI" data-platform="youtube">
+            <div class="card-image">
+              <img src="images/copertine/15_YOUTUBE_sci.png" alt="Video 2" data-platform="youtube">
+              <div class="play-icon">&#9658;</div> 
+            </div>
+            <div class="card-content">
+              <h3>Tour Brec de Chambeyron</h3>
+              <p>
+                Lo sci alpinismo è sicuramente il modo migliore per godere della bellezza selvaggia dell’alta quota
+                d’inverno. In questo video racconto due giorni intensi, in compagnia del CAI Saluzzo, tra Valle Maira e
+                Francia, che ci hanno portato a raggiungere la cima di Tete de la Frema, a 3.151 metri.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card" data-video="-bu6Wf0MAzTeF4LQ">
-          <div class="card-image">
-            <img src="images/heyhey.jpg" alt="Borgata Villaretto">
-            <div class="play-icon">&#9658;</div>
+      </div>
+        <div id="lightbox" class="lightbox">
+          <div class="lightbox-content">
+            <span class="close">&times;</span>
+            <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
-      </div>
-
-      <div class="youtube-right">
-        <h2>YOUPORN</h2>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-          into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-          release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-          software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-          into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-          release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-          software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-      </div>
-
-    </div>
-    <div id="lightbox" class="lightbox">
-
-      <div class="lightbox-content">
-        <span class="close">&times;</span>
-        <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
-  <section id="contatti">
-    <h2>Contatti</h2>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/edo_blua_ph/" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.youtube.com/@edoardoblua" target="_blank">
-        <i class="fab fa-youtube"></i>
-      </a>
-    </div>
   </section>
 
   <footer>

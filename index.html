@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="images/logo_EB.png">
-
+<script src="https://player.vimeo.com/api/player.js"></script>
   <script src="script/script.js"></script>
 </head>
 
@@ -34,7 +34,7 @@
   <section class="video-hero">
 
     <video id="showreelVideo" class="bg-video" autoplay muted loop playsinline>
-      <source src="videos/HOMEPAGE_banner.mp4" type="video/mp4">
+      <source src="videos/BANNER_HOMEPAGE.mp4" type="video/mp4">
       Il tuo browser non supporta il video.
     </video>
 
@@ -45,17 +45,14 @@
     </div>
     <!-- MODAL SHOWREEL -->
     <div class="video-modal" id="videoModal">
-      <div class="video-modal-content">
-        <video id="modalVideo" controls>
-          <source src="videos/HOMEPAGE_banner.mp4" type="video/mp4">
-        </video>
+      <div class="video-modal-content">          
+            <iframe id="modalVideo" src="https://player.vimeo.com/video/1169624416?autoplay=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
   </section>
   <div class="background-wrapper">
     <section id="about" class="about">
       <div class="container about-wrapper">
-
         <div class="about-image">
           <img src="images/about.jpg" alt="Edoardo Blua">
         </div>
@@ -63,8 +60,7 @@
         <div class="about-text">
           <p>
             <span class="highlight1">Mi chiamo Edoardo<br> e racconto storie</span>
-            <span class="highlight2">Mi piace farlo attraverso i video par dar forma a quello che le parole non riescono
-              a dire</span>
+            <span class="highlight2">Mi piace farlo attraverso i video per dar forma a quello che le parole, da sole, non riescono a dire</span>
           </p>
 
           <a href="about.html" class="about-btn">
@@ -76,11 +72,11 @@
     </section>
 
     <section id="portfolio" class="documentari-section">
-      <div class="container">
+      <div class="documentari-container">
         <h2>DOCUMENTARI</h2>
         <div class="grid">
           <div class="card-wrapper">
-            <div class="card" data-video="DBc67iGplCQ">
+            <div class="card" data-platform="youtube" data-video="DBc67iGplCQ">
               <div class="card-image">
                 <img src="images/copertine/1_DOC_BorgataVillaretto.png" alt="Video 2">
                 <div class="play-icon">&#9658;</div> <!-- simbolo di play -->
@@ -93,7 +89,7 @@
                   realtà socio antropologica di una borgata di 19 abitanti a 1080 s.l.m..</p>
               </div>
             </div>
-            <div class="card reverse" data-video="EcnCBkxEBiE">
+            <div class="card reverse" data-platform="youtube" data-video="EcnCBkxEBiE">
               <div class="card-image">
                 <img src="images/copertine/2_DOC_ViteRitrattiLanghe.png" alt="Video 2">
                 <div class="play-icon">&#9658;</div> <!-- simbolo di play -->
@@ -120,7 +116,7 @@
         <h2>VIDEO SPORTIVI</h2>
         <div class="grid">
           <div class="card-wrapper">
-            <div class="card" data-video="noQgnShlN1M">
+            <div class="card" data-video="noQgnShlN1M" data-platform="youtube">
               <div class="card-image">
                 <img src="images/copertine/3_SPORT_Transvaraita.png" alt="Video 2">
                 <div class="play-icon">&#9658;</div> <!-- simbolo di play -->
@@ -140,7 +136,7 @@
                 </p>
               </div>
             </div>
-            <div class="card reverse" data-video="fGCpEyy-2NI">
+            <div class="card reverse" data-video="fGCpEyy-2NI" data-platform="youtube">
               <div class="card-image">
                 <img src="images/copertine/4_SPORT_UrbanTrail.png" alt="Video 2">
                 <div class="play-icon">&#9658;</div> <!-- simbolo di play -->
@@ -161,7 +157,6 @@
           </div>
         </div>
         <div id="lightbox" class="lightbox">
-
           <div class="lightbox-content">
             <span class="close">&times;</span>
             <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -177,32 +172,31 @@
           garantisce la massima aderenza agli obiettivi del committente, traducendo la visione dell’evento in un
           prodotto audiovisivo.</p>
         <div class="grid">
-
-          <div class="card" data-video="foLErbQ8Th0">
+          <div class="card" data-video="foLErbQ8Th0" data-platform="youtube">
             <div class="card-image">
               <img src="images/copertine/5_EVENTI_D_Acord.png" alt="Borgata Villaretto">
               <div class="play-icon">&#9658;</div>
             </div>
           </div>
 
-          <div class="card" data-video="WThKpmiSEeE">
+          <div class="card" data-video="WThKpmiSEeE" data-platform="youtube">
             <div class="card-image">
               <img src="images/copertine/8_EVENTI_CeFermento.png" alt="Borgata Villaretto">
               <div class="play-icon">&#9658;</div>
             </div>
 
           </div>
-          <div class="card" data-video="WThKpmiSEeE">
+          <div class="card" data-video="aO_26S-P2BU" data-platform="youtube">
             <div class="card-image">
-              <img src="images/copertine/8_EVENTI_CeFermento.png" alt="Borgata Villaretto">
+              <img src="images/copertine/8_EVENTI_LibroMedievale.png" alt="Borgata Villaretto">
               <div class="play-icon">&#9658;</div>
             </div>
 
           </div>
 
-          <div class="card" data-video="foLErbQ8Th0">
+          <div class="card" data-video="RviwPmWARkI" data-platform="youtube">
             <div class="card-image">
-              <img src="images/copertine/5_EVENTI_D_Acord.png" alt="Borgata Villaretto">
+              <img src="images/copertine/8_EVENTI_Ripopolare.png" alt="Borgata Villaretto">
               <div class="play-icon">&#9658;</div>
             </div>
           </div>
@@ -218,19 +212,17 @@
           un’interiorità altrimenti inaccessibile. Se l’immagine mostra il volto, è la voce a rivelarne l’anima.</p>
         <div class="grid">
 
-          <div class="card" data-video="PhBCgD4oSfM">
+          <div class="card" data-video="PhBCgD4oSfM" data-platform="youtube">
             <div class="card-image">
-              <img src="images/copertine/9_MATRIMONI_LucaElisa.png" alt="Video 2">
+              <img src="images/copertine/9_MATRIMONIO_LucaElisa.png" alt="Video 2">
               <div class="play-icon">&#9658;</div>
             </div>
-            <h3>Luca & Elisabetta</h3>
           </div>
-          <div class="card" data-video="GD2nLFeVH18">
+          <div class="card" data-video="GD2nLFeVH18" data-platform="youtube">
             <div class="card-image">
               <img src="images/copertine/9_MATRIMONI_LucaElisa.png" alt="Video 2">
               <div class="play-icon">&#9658;</div>
             </div>
-            <h3>Luca & Elisa</h3>
           </div>
 
         </div>
@@ -250,7 +242,9 @@
     </section>
   </div>
   <footer>
-    © 2026 Edoardo Blua — Video Maker
+   Edoardo Blua - Via Cavour 6, 12030, Lagnasco (CN) - P.IVA: 03940500048
+Copyright © 2026 Edoardo Blua | All rights reserved
+
   </footer>
 
 </body>

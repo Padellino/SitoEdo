@@ -7,78 +7,78 @@ document.addEventListener('DOMContentLoaded', () => {
   cards.forEach(card => {
     card.addEventListener('click', () => {
       const videoId = card.getAttribute('data-video');
-      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      const platform = card.getAttribute('data-platform');
+
+      let videoUrl = '';
+
+      if (platform === 'youtube') {
+        videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      }
+
+      if (platform === 'vimeo') {
+        videoUrl = `https://player.vimeo.com/video/${videoId}?autoplay=1`;
+      }
+
+      iframe.src = videoUrl;
       lightbox.style.display = 'flex';
     });
   });
 
-  close.addEventListener('click', () => {
+  function closeLightbox() {
     iframe.src = '';
     lightbox.style.display = 'none';
-  });
+  }
+
+  close.addEventListener('click', closeLightbox);
 
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) {
-      iframe.src = '';
-      lightbox.style.display = 'none';
+      closeLightbox();
     }
   });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const hero = document.querySelector(".video-hero");
+  const button = document.querySelector(".showreel-btn");
   const modal = document.getElementById("videoModal");
-  const modalVideo = document.getElementById("modalVideo");
+  const iframe = document.getElementById("modalVideo");
+
+  const player = new Vimeo.Player(iframe);
 
   // APERTURA
-  hero.addEventListener("click", function () {
-    if (!modal.classList.contains("active")) {
-      modal.classList.add("active");
-      document.body.style.overflow = "hidden";
-      modalVideo.play();
+  button.addEventListener("click", function (e) {
+    e.preventDefault(); // 🔥 blocca salto ancora
+
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+
+    player.play();
+  });
+
+  // CHIUSURA clic fuori dal contenuto
+  modal.addEventListener("click", function (e) {
+    if (!iframe.contains(e.target)) {
+      closeModal();
     }
   });
 
-  // CHIUSURA clic fuori
-  modal.addEventListener("click", function (e) {
-    if (!modalVideo.contains(e.target)) {
-      e.stopPropagation(); // 🔥 blocca propagazione
+  // CHIUSURA con ESC
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
       closeModal();
     }
   });
 
   function closeModal() {
     modal.classList.remove("active");
-    modalVideo.pause();
-    modalVideo.currentTime = 0;
+
+    player.pause().then(function () {
+      player.setCurrentTime(0);
+    });
+
     document.body.style.overflow = "auto";
   }
-
-});
-document.addEventListener("DOMContentLoaded", function () {
-
-  const scrollBtn = document.querySelector(".scroll-btn");
-
-  scrollBtn.addEventListener("click", function(e) {
-    e.stopPropagation(); // 🔥 blocca il click di propagare al video
-  });
-
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  const scrollBtn = document.querySelector(".scroll-btn");
-
-  scrollBtn.addEventListener("click", function(e) {
-    e.stopPropagation(); // blocca apertura showreel
-    e.preventDefault(); // evita default ancoraggio
-
-    const target = document.querySelector(this.getAttribute("href"));
-    if(target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
 
 });
 
