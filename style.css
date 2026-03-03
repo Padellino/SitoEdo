@@ -19,7 +19,7 @@ h3 {
 }
 
 section {
-  padding-top: 50px;
+  padding-top: 15%;
 }
 
 .logo img {
@@ -29,13 +29,14 @@ section {
 }
 
 .container {
-  max-width: 90%;
-  margin: 10px auto;
-  margin: 0 20%;
+  margin: 0 auto;
+  padding: 0 5%;
+  margin: 0 5%;
   align-items: center;
 }
 
 .container h2 {
+  margin-bottom: 0;
   color: var(--accent);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -51,6 +52,7 @@ section {
   width: 100%;
   overflow: hidden;
   cursor: pointer;
+  padding-top: 0;
 }
 
 /* VIDEO */
@@ -166,32 +168,6 @@ section {
   width: 100%;
   height: 100%;
   border-radius: 12px;
-}
-
-/* ============================ */
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-
-  /* TESTO */
-  .video-content h2 {
-    font-size: clamp(28px, 8vw, 40px);
-  }
-
-  /* padding testo */
-  .video-content {
-    padding: 0 15px;
-  }
-
-  /* MODAL VIDEO */
-  .video-modal-content {
-    width: 95%;
-    max-width: 600px;
-  }
-
-  /* video */
-  .video-modal video {
-    border-radius: 6px;
-  }
 }
 
 .btn {
@@ -348,8 +324,7 @@ section {
   height: auto;
   max-height: 800px;
   display: block;
-  border-radius: 10px 10px 0 0;
-  margin: 0;  
+  margin: 0;
   object-fit: contain;
 }
 
@@ -373,6 +348,7 @@ section {
   color: var(--accent);
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
+  font-size: 35px;
   text-align: left !important;
   margin: 0 0 15px 0;
   padding: 0;
@@ -380,6 +356,9 @@ section {
 
 .card-content p {
   margin: 0;
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 20px;
 }
 
 /* Simbolo play */
@@ -416,7 +395,7 @@ section {
 .card h3 {
   color: var(--accent);
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 800;
   text-align: left;
   padding: 15px 0;
@@ -432,6 +411,7 @@ section {
   margin: 0;
   /* niente spazio extra */
 }
+
 .card-content h3 .card-subtitle2 {
   display: block;
   font-family: 'Montserrat', sans-serif;
@@ -491,10 +471,12 @@ section {
 }
 
 .documentari-section .card img {
-  height: 70%;
-  width: 90%;
-  border-radius: 10px 10px 0 0;
+    width: 100%;
+  height: auto;
+  max-height: 800px;
   display: block;
+  margin: 0;
+  object-fit: contain;
 }
 
 /* Wrapper immagine */
@@ -563,15 +545,17 @@ section {
   text-align: right !important;
   padding: 15px 0;
 }
-.documentari-section .card.reverse .card-image{
+
+.documentari-section .card.reverse .card-image {
   position: relative;
   margin-right: auto;
 }
+
 .documentari-section .card h3 {
   color: var(--accent);
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-   font-size: 35px;
+  font-size: 35px;
   text-align: center;
   padding: 15px 0;
 }
@@ -617,11 +601,12 @@ section {
 
 
 footer {
+  margin-top: 5%;
   text-align: center;
-  padding: 40px 10%;
-  border-top: 1px solid #222;
+  padding-bottom: 30px;
   font-size: 0.9rem;
   background: var(--accent);
+  color: var(--bg);
 }
 
 a {
@@ -642,7 +627,8 @@ a:hover {
   width: 100%;
   background: var(--bg);
   backdrop-filter: blur(6px);
-  padding: 10px 20px; /* 🔥 niente percentuali */
+  padding: 10px 20px;
+  /* 🔥 niente percentuali */
   z-index: 1000;
   box-sizing: border-box;
 }
@@ -655,7 +641,8 @@ a:hover {
 
 .logo img {
   height: 40px;
-  max-width: 150px; /* 🔥 evita logo gigante */
+  max-width: 150px;
+  /* 🔥 evita logo gigante */
 }
 
 .nav-links {
@@ -666,7 +653,8 @@ a:hover {
 }
 
 .nav-links a {
-  font-size: 15px; /* leggermente più piccolo */
+  font-size: 15px;
+  /* leggermente più piccolo */
   font-weight: 700;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
@@ -683,20 +671,21 @@ a:hover {
 }
 
 .social-icons a {
-  font-size: 28px;
+  font-size: 60px;
   margin-right: 20px;
-  color: var(--text);
+  color: var(--bg);
   transition: 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: var(--accent);
+  color: var(--bg);
   transform: scale(1.2);
 }
 
 
 .about {
   max-width: 95%;
+  padding-top: 5%;
 }
 
 .about-wrapper {
@@ -827,13 +816,9 @@ a:hover {
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   justify-content: center;
   padding: 20px;
-  
+
 }
-@media (max-width: 600px) {
-  .eventi-section .grid {
-    grid-template-columns: 1fr; /* 1 card per riga */
-  }
-}
+
 .eventi-section .card {
   background: transparent;
   /* niente sfondo per la card */
@@ -841,12 +826,15 @@ a:hover {
   overflow: hidden;
   transition: 0.3s ease;
 }
-.eventi-p{
+
+.eventi-p {
+  margin-top: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   text-align: justify;
   font-weight: 600;
 }
+
 /* Immagine */
 .eventi-section .card-image {
   position: relative;
@@ -886,23 +874,26 @@ a:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-
   justify-content: flex-start;
-  /* testo in alto */
-  align-items: stretch;
-  /* larghezza piena */
+  align-items: center;         
+  margin: 0;
 
-  text-align: justify;
-  /* testo giustificato */
   color: var(--text);
-
-  padding-top: 40px;
+  padding: 40px 20px 0 20px;  
+  box-sizing: border-box;       
 }
-
+.hero-content-youtube h1 {
+  font-size: clamp(40px, 6vw, 60px); 
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  text-align: justify; 
+  padding: 0 50px;
+}
 .youtube-page {
   padding: 80px 10%;
   background: var(--bg);
-  color: #BDC3C7;
+  color: var(--text);
 }
 
 .youtube-wrapper {
@@ -929,10 +920,10 @@ a:hover {
   flex: 1;
 }
 
-.youtube-right h2 {
+.youtube-right h3 {
   color: var(--accent);
   font-family: 'Montserrat', sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   font-size: clamp(28px, 4vw, 40px);
 }
 
@@ -940,6 +931,7 @@ a:hover {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   margin-bottom: 15px;
+  font-size: 15px;
 }
 
 
@@ -1029,8 +1021,10 @@ a:hover {
 
 /* ABOUT FOOTER */
 .fondo-pagina {
-  background-color: var(--bg); /* colore di sfondo */
-  color: var(--text);            /* colore del testo */
+  background-color: var(--bg);
+  /* colore di sfondo */
+  color: var(--text);
+  /* colore del testo */
   padding: 40px 20px;
   text-align: center;
   font-family: Arial, sans-serif;
@@ -1044,8 +1038,10 @@ a:hover {
 .contenuto {
   display: flex;
   justify-content: space-between;
-  max-width: 600px; /* larghezza massima della riga dei paragrafi */
-  margin: 0 auto;   /* centra il contenitore */
+  max-width: 600px;
+  /* larghezza massima della riga dei paragrafi */
+  margin: 0 auto;
+  /* centra il contenitore */
 }
 
 .contenuto p {
@@ -1059,6 +1055,7 @@ a:hover {
 .destra {
   text-align: right;
 }
+
 .btn-cv {
   display: inline-block;
   padding: 8px 16px;
@@ -1073,4 +1070,86 @@ a:hover {
 
 .btn-cv:hover {
   background-color: #e65c00;
+}
+
+
+/*CAROSELLO*/
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 100px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.slide-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0 60px;
+}
+
+.slide-image {
+  flex: 1;
+}
+
+.slide-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.slide-text {
+  flex: 1;
+}
+
+.slide-text h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.slide-text p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Frecce */
+.arrow {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  width: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }

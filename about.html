@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="images/logo_EB.png">
-  <script src="script.js"></script>
+  <script src="script/carousel.js" defer></script>
+  <script src="script/script.js"></script>
 </head>
 
 <body>
@@ -31,84 +32,101 @@
       </div>
     </div>
   </nav>
+  <div class="background-wrapper">
+    <div class="carousel">
+      <div class="carousel-track">
 
-  <section>
-    <div class="container">
-      <div class="grid">
-        <div class="card-wrapper">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/about/1_AboutMe.png" alt="Video 2">
+        <div class="slide">
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="images/about/AboutMe_1.png" alt="Immagine 1">
             </div>
-            <div class="card-content">
-              <p>
-                Sono Edoardo, classe 2000. Lagnaschese d’origine e torinese d’adozione.
-                Ho iniziato per gioco, rubando la telecamera di mio padre per fare i filmini delle vacanze, col tempo,
-                lentamente, quel gioco è diventato un lavoro.
+            <div class="slide-text">
+              <p>Mi piace pacioccare con la telecamera da quando ho memoria. Fin da piccolo la rubavo a mio padre per
+                documentare le vacanze di famiglia. Una volta a casa, cercando di padroneggiare Windows Movie Maker,
+                provavo a fare dei video riassuntivi.
+                Crescendo, e abbandonando Movie Maker, quel gioco è diventato un lavoro.
               </p>
-               <div class="card-image">
-              <img src="images/about/2_AboutMe.png" alt="Video 2">
-            </div>
-            </div>
-           
-          </div>
-          <div class="card">
-            <div class="card-content">
-              <p>
-                Dopo il liceo artistico, ho scelto la Scuola APM di Saluzzo, frequentando il corso da "Tecnico di
-                produzione video". Un anno intensivo di regia, montaggio, fotografia e audio che ha consolidato le mie
-                basi tecniche e artistiche.
-                L’esperienza è culminata in uno stage da Smart Factory, collaborazione che prosegue con successo ancora
-                oggi. Dal 2021 opero come libero professionista, collaborando stabilmente con case di produzione
-                torinesi e realtà del saluzzese.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-image">
-               <img src="images/about/4_AboutMe.png" alt="Video 2">
-            </div>
-            <div class="card-content">
-              <p>
-                Il mio rapporto con Torino, dal 2021, è anche il rapporto di uno studente con la sua città
-                universitaria. Parallelamente alla macchina da presa, ho infatti portato avanti la mia formazione
-                accademica. Nel 2024 mi sono laureato in Filosofia Teoretica con una tesi sul rapporto tra l’etica
-                kantiana ed il socialismo.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-content">
-              <p>
-                Perchè la filosofia? Bah, potrebbe essere il tema di un corso intero all’Università. Per me, studiare il
-                pensiero è stato il miglior metodo possibile per imparare a raccontare il mondo: se il cinema
-                rappresenta la realtà, la filosofia cerca di comprenderla.
-              </p>
-            </div>
-          </div>
-          <div class="card reverse">
-            <div class="card-image">
-              <img src="images/about/6_AboutMe.png" alt="Video 2">
-            </div>
-            <div class="card-content">
-              <p>
-                Certo la realtà non basta studiarla bisogna viverla! Così nel maggio 2025, dopo la laurea, sono partito
-                in bicicletta per un viaggio di due mesi e 5.000 km, pedalando fino ad Atene e risalendo l'Italia da
-                Bari. Un'odissea balcanica tra cascate, mare, montagne e tante persone, che presto diventerà una serie
-                documentaria sul mio canale YouTube. </p>
             </div>
           </div>
         </div>
+        <div class="slide">
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="images/about/AboutMe_2.png" alt="Immagine 1">
+            </div>
+            <div class="slide-text">
+              <p>Dopo il liceo artistico, ho frequentato il corso da “Tecnico di produzione video” della Scuola APM di
+                Saluzzo. Un anno intensivo di regia, montaggio, fotografia e audio che ha consolidato le mie basi
+                tecniche e artistiche.
+                L’esperienza è culminata con uno stage da Smart Factory, casa di produzione con cui collaboro ancora
+                oggi.
+                Dal 2021 opero come libero professionista, collaborando stabilmente con case di produzione torinesi e
+                realtà del saluzzese.
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="images/about/AboutMe_3.png" alt="Immagine 1">
+            </div>
+            <div class="slide-text">
+              <p>Parallelamente alla macchina da presa, tra il 2021 ed il 2024 ho portato avanti la mia formazione
+                accademica laureandomi in Filosofia Teoretica con una tesi sul rapporto tra l’etica kantiana ed il
+                socialismo. Perchè filosofia? Bah... potrebbe essere il tema di un intero corso all’Università. Diciamo
+                che, se la filosofia studia la realtà, e il cinema ha la pretesa di rappresentarla; allora la filosofia
+                mi sembrava il miglior mezzo per raccontare consapevolmente il mondo intorno a me.
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="images/about/AboutMe_4.png" alt="Immagine 1">
+            </div>
+            <div class="slide-text">
+              <p>Certo la realtà non basta studiarla bisogna viverla! Così, nel maggio 2025, dopo la laurea, sono
+                partito in bicicletta per un viaggio di due mesi e 5.000 km, pedalando fino ad Atene e risalendo
+                l'Italia da Bari a casa. Un’avventura che presto diventerà una serie sul mio canale YouTube.
+                Videomaker, filosofo, e pure ciclista... forse era meglio non mettere questa pagina! Se invece non hai
+                paura di una citazione kantiana, scrivimi, e pensiamo insieme la tua idea!
+
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
-  </section>
-<section class="fondo-pagina">
-  <h2 class="titolo">Oltre le immagini, cerchiamone il significato</h2>
-  <div class="contenuto">
-    <p class="sinistra">Hai un progetto in mente? Parliamone<br>prometto di non citare Kant nella prima mail:</p>
-    <p class="destra">edoardo.blua@gmail.com<br><a href="file/CV_EB_02.26.pdf" download class="btn-cv">Scarica CV</a></p>
-  </div>
-</section>
-  <footer>
-    © 2026 Edoardo Blua — Video Maker
+
+      <img src="images/freccia_sx.png" class="arrow prev" alt="Precedente">
+      <img src="images/freccia_dx.png" class="arrow next" alt="Successivo">
+    </div>
+      <section class="fondo-pagina">
+        <h2 class="titolo">Oltre le immagini, cerchiamone il significato</h2>
+        <div class="contenuto">
+          <p class="sinistra">Hai un progetto in mente? Parliamone<br>prometto di non citare Kant nella prima mail:</p>
+          <p class="destra">edoardo.blua@gmail.com<br><a href="file/CV_EB_02.26.pdf" download class="btn-cv">Scarica
+              CV</a></p>
+        </div>
+      </section>
+      
+      
+          <footer>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/edo_blua_ph/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/@edoardoblua" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+   Edoardo Blua - Via Cavour 6, 12030, Lagnasco (CN) - P.IVA: 03940500048
+Copyright © 2026 Edoardo Blua | All rights reserved
+
   </footer>
 </body
