@@ -1,5 +1,5 @@
 :root {
-  --bg: #0F1D2B;
+  --bg: #020306;
   --text: #E5E7E6;
   --accent: #E8D7A0;
 }
@@ -31,6 +31,8 @@ section {
 .container {
   max-width: 90%;
   margin: 10px auto;
+  margin: 0 20%;
+  align-items: center;
 }
 
 .container h2 {
@@ -284,7 +286,7 @@ section {
 
 /* effetto hover */
 .showreel-btn:hover {
-  background: rgba(255, 179, 71, 0.5);
+  background: var(--accent);
   color: #11151f;
   /* cambia colore testo all’hover per contrasto */
   border-color: var(--accent);
@@ -314,11 +316,10 @@ section {
 
 .grid {
   display: grid;
-  margin-top: 30px;
-  width: 90%;
+  margin-top: 0;
+  width: 100%;
   gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  padding: 20px;
 }
 
 /* Contenitore card wrapper */
@@ -425,10 +426,20 @@ section {
   display: block;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.2;
   color: var(--text);
   margin: 0;
+  /* niente spazio extra */
+}
+.card-content h3 .card-subtitle2 {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--text);
+  margin: 10px 0;
   /* niente spazio extra */
 }
 
@@ -436,17 +447,18 @@ section {
 
 /* GRID DELLA SEZIONE DOCUMENTARI */
 .documentari-container {
-  max-width: 90%;
   margin: 0 auto;
   padding: 0 5%;
+  margin: 0 5%;
+  align-items: center;
 }
 
 .documentari-section .grid {
   display: grid;
+  margin-top: 0;
   width: 90%;
   gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  padding: 20px;
 }
 
 /* Contenitore card wrapper */
@@ -469,7 +481,8 @@ section {
   color: var(--accent);
   font-weight: 800;
   font-family: 'Montserrat', sans-serif !important;
-  font-size: 75px;
+  font-size: 100px;
+  margin-bottom: 0;
 }
 
 
@@ -486,7 +499,6 @@ section {
 
 /* Wrapper immagine */
 .documentari-section .card-image {
-  top: 10%;
   flex: 1;
   position: relative;
 }
@@ -500,23 +512,12 @@ section {
   flex: 1;
 }
 
-.documentari-section .card-content h3 {
-  color: var(--accent);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
-  font-weight: 800;
-  text-align: right;
-  margin: 0;
-  padding: 0;
-  line-height: 1.2;
-}
-
 /* Sottotitolo attaccato sotto il titolo */
 .documentari-section .card-content h3 .card-subtitle {
   display: block;
   color: var(--text);
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.2;
   /* compatto */
   margin: 0;
@@ -528,6 +529,7 @@ section {
   margin: 0;
   color: var(--text);
   line-height: 1.6;
+  font-size: 20px;
 }
 
 /* Simbolo play */
@@ -536,7 +538,7 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 50px;
+  font-size: 80px;
   color: var(--accent);
   opacity: 0.9;
   pointer-events: none;
@@ -556,15 +558,20 @@ section {
 .documentari-section .card.reverse h3 {
   color: var(--accent);
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-size: 35px;
+  font-weight: 800;
   text-align: right !important;
   padding: 15px 0;
 }
-
+.documentari-section .card.reverse .card-image{
+  position: relative;
+  margin-right: auto;
+}
 .documentari-section .card h3 {
   color: var(--accent);
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-weight: 800;
+   font-size: 35px;
   text-align: center;
   padding: 15px 0;
 }
@@ -614,7 +621,7 @@ footer {
   padding: 40px 10%;
   border-top: 1px solid #222;
   font-size: 0.9rem;
-  background: var(--bg);
+  background: var(--accent);
 }
 
 a {
@@ -752,7 +759,7 @@ a:hover {
   line-height: 1.1;
   color: var(--text);
   font-size: 35px;
-  font-weight: 600;
+  font-weight: 700;
   text-align: right;
   margin-top: 10px;
 }
@@ -768,7 +775,7 @@ a:hover {
   color: #11151f;
   /* colore testo */
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 16px;
   text-decoration: none;
   /* rimuove sottolineatura */
@@ -799,7 +806,7 @@ a:hover {
   font-weight: 800;
   font-size: 25px;
   /* testo più grande */
-  background: rgba(255, 179, 71, 0.4);
+  background: rgba(232, 215, 160, 0.4);
   border-radius: 50px;
   /* semicerchi ai lati */
   text-align: center;
@@ -808,7 +815,7 @@ a:hover {
 
 /* effetto hover */
 .showreel-btn:hover {
-  background: rgba(255, 179, 71, 0.5);
+  background: rgba(136, 108, 8, 0.5);
   color: var(--text);
   border-color: #F1C40F;
 }
@@ -834,7 +841,12 @@ a:hover {
   overflow: hidden;
   transition: 0.3s ease;
 }
-
+.eventi-p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  text-align: justify;
+  font-weight: 600;
+}
 /* Immagine */
 .eventi-section .card-image {
   position: relative;
